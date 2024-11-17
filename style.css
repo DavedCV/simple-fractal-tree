@@ -1,0 +1,78 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.title {
+  margin: 20px 0;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.slider {
+  margin-bottom: 15px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.button {
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  max-width: 200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+.button.active {
+  background-color: #007BFF;
+  color: #fff;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+  font-weight: bold;
+}
+
+#fractal-canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+  display: block;
+}
