@@ -1,0 +1,41 @@
+@startuml Arbol Fractal
+
+title Arbol Fractal
+
+start
+
+:Inicializar el lienzo y los controles;
+
+if (¿Es el render inicial?) then (Sí)
+  -> Generar árbol;
+else (No)
+  if (¿Ángulo o profundidad cambiaron?) then (Sí)
+    -> Generar árbol;
+  else (No)
+    stop
+  endif
+endif
+
+:Dibujar todas las ramas;
+stop
+
+partition "Generar árbol" {
+  :Inicializar la rama raíz;
+  repeat
+    :Para cada rama en el árbol;
+    if (¿Rama finalizada?) then (Sí)
+      :Omitir la rama;
+    else (No)
+      :Marcar la rama como finalizada;
+      :Crear ramas hijas;
+      note right
+        Se crean dos nuevas ramas
+        basadas en el ángulo de rotación
+        y el factor de reducción.
+      end note
+      :Añadir las ramas hijas al árbol;
+    endif
+  repeat while (¿Límite de profundidad alcanzado?) is (No)
+}
+
+@enduml
